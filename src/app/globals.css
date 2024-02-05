@@ -1,33 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto; 
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  & input[type="file"] {
+      margin-bottom: 16px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  & input, button {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 3px;
+      overflow: hidden;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  & .state-message {
+      padding: 10px;
+      text-align: center;
+  }
+
+  & .state-message.success {
+      color: green;
+  }
+
+  & .state-message.error {
+      color: red;
+  }
+
+  & .submit-button {
+      display: block;
+      background-color: green;
+      padding: 10px;
+      cursor: pointer;
+      border: 0;
+      font-size: 18px;
+      color: white;
   }
 }
