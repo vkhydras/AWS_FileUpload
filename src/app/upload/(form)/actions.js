@@ -43,7 +43,7 @@ export async function uploadFile(prevState, formData) {
         message: "Plaesse select a file",
       };
 
-    const buffre = Buffer.from(await file.arrayBuffer());
+    const buffer = Buffer.from(await file.arrayBuffer());
     await uploadFileToS3(buffer, file.name);
 
     console.log(file);
