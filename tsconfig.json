@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/upload/(form)/actions.js", "src/app/upload/(form)/actions.js", "src/app/upload/(form)/form.js"],
   "exclude": ["node_modules"]
 }
